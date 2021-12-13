@@ -1,9 +1,9 @@
 # coding=utf-8
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class HashBuster(HackingTool):
+class HashBuster(KryptonHub):
     TITLE = "Hash Buster"
     DESCRIPTION = "Features: \n " \
                   "Automatic hash type identification \n " \

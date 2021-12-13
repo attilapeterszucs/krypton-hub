@@ -2,18 +2,18 @@
 import os
 from time import sleep
 
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class UpdateTool(HackingTool):
+class UpdateTool(KryptonHub):
     TITLE = "Update Tool or System"
     DESCRIPTION = "Update Tool or System"
 
     def __init__(self):
         super(UpdateTool, self).__init__([
             ("Update System", self.update_sys),
-            ("Update Hackingtool", self.update_ht)
+            ("Update KryptonHub", self.update_kh)
         ], installable = False, runnable = False)
 
     def update_sys(self):
@@ -22,23 +22,23 @@ class UpdateTool(HackingTool):
             "sudo apt-get install tor openssl curl && sudo apt-get update tor openssl curl")
         os.system("sudo apt-get install python3-pip")
 
-    def update_ht(self):
+    def update_kh(self):
         os.system("sudo chmod +x /etc/;"
                   "sudo chmod +x /usr/share/doc;"
-                  "sudo rm -rf /usr/share/doc/hackingtool/;"
+                  "sudo rm -rf /usr/share/doc/krypton-hub/;"
                   "cd /etc/;"
-                  "sudo rm -rf /etc/hackingtool/;"
-                  "mkdir hackingtool;"
-                  "cd hackingtool;"
-                  "git clone https://github.com/Z4nzu/hackingtool.git;"
-                  "cd hackingtool;"
+                  "sudo rm -rf /etc/krypton-hub/;"
+                  "mkdir krypton-hub;"
+                  "cd krypton-hub;"
+                  "git clone https://github.com/JustKKrypton/krypton-hub.git;"
+                  "cd krypton-hub;"
                   "sudo chmod +x install.sh;"
                   "./install.sh")
 
 
-class UninstallTool(HackingTool):
-    TITLE = "Uninstall HackingTool"
-    DESCRIPTION = "Uninstall HackingTool"
+class UninstallTool(KryptonHub):
+    TITLE = "Uninstall Krypton-Hub"
+    DESCRIPTION = "Uninstall Krypton-Hub"
 
     def __init__(self):
         super(UninstallTool, self).__init__([
@@ -46,20 +46,20 @@ class UninstallTool(HackingTool):
         ], installable = False, runnable = False)
 
     def uninstall(self):
-        print("hackingtool started to uninstall..\n")
+        print("Krypton-Hub started to uninstall..\n")
         sleep(1)
         os.system("sudo chmod +x /etc/;"
                   "sudo chmod +x /usr/share/doc;"
-                  "sudo rm -rf /usr/share/doc/hackingtool/;"
+                  "sudo rm -rf /usr/share/doc/krypton-hub/;"
                   "cd /etc/;"
-                  "sudo rm -rf /etc/hackingtool/;")
-        print("\nHackingtool Successfully Uninstalled..")
+                  "sudo rm -rf /etc/krypton-hub/;")
+        print("\nKrypton-Hub Successfully Uninstalled..")
         print("Happy Hacking..!!")
         sleep(1)
 
 
 class ToolManager(HackingToolsCollection):
-    TITLE = "Update or Uninstall | Hackingtool"
+    TITLE = "Update or Uninstall | Krypton-Hub"
     TOOLS = [
         UpdateTool(),
         UninstallTool()

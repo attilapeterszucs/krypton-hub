@@ -1,9 +1,9 @@
 # coding=utf-8
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class GoSpider(HackingTool):
+class GoSpider(KryptonHub):
     TITLE = "Gospider"
     DESCRIPTION = "Gospider - Fast web spider written in Go"
     INSTALL_COMMANDS = ["sudo go get -u github.com/jaeles-project/gospider"]

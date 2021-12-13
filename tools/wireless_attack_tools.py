@@ -1,11 +1,11 @@
 # coding=utf-8
 import os
 
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class WIFIPumpkin(HackingTool):
+class WIFIPumpkin(KryptonHub):
     TITLE = "WiFi-Pumpkin"
     DESCRIPTION = "The WiFi-Pumpkin is a rogue AP framework to easily create " \
                   "these fake networks\n" \
@@ -22,7 +22,7 @@ class WIFIPumpkin(HackingTool):
     PROJECT_URL = "https://github.com/P0cL4bs/wifipumpkin3"
 
 
-class pixiewps(HackingTool):
+class pixiewps(KryptonHub):
     TITLE = "pixiewps"
     DESCRIPTION = "Pixiewps is a tool written in C used to bruteforce offline " \
                   "the WPS pin\n " \
@@ -46,7 +46,7 @@ class pixiewps(HackingTool):
         print("You Have To Run Manually By USing >>pixiewps -h ")
 
 
-class BluePot(HackingTool):
+class BluePot(KryptonHub):
     TITLE = "Bluetooth Honeypot GUI Framework"
     DESCRIPTION = "You need to have at least 1 bluetooh receiver " \
                   "(if you have many it will work with those, too).\n" \
@@ -60,7 +60,7 @@ class BluePot(HackingTool):
     PROJECT_URL = "https://github.com/andrewmichaelsmith/bluepot"
 
 
-class Fluxion(HackingTool):
+class Fluxion(KryptonHub):
     TITLE = "Fluxion"
     DESCRIPTION = "Fluxion is a remake of linset by vk496 with enhanced functionality."
     INSTALL_COMMANDS = [
@@ -71,7 +71,7 @@ class Fluxion(HackingTool):
     PROJECT_URL = "https://github.com/FluxionNetwork/fluxion"
 
 
-class Wifiphisher(HackingTool):
+class Wifiphisher(KryptonHub):
     TITLE = "Wifiphisher"
     DESCRIPTION = """
         Wifiphisher is a rogue Access Point framework for conducting red team engagements or Wi-Fi security testing. 
@@ -89,7 +89,7 @@ class Wifiphisher(HackingTool):
     PROJECT_URL = "https://github.com/wifiphisher/wifiphisher"
 
 
-class Wifite(HackingTool):
+class Wifite(KryptonHub):
     TITLE = "Wifite"
     DESCRIPTION = "Wifite is an automated wireless attack tool"
     INSTALL_COMMANDS = [
@@ -100,7 +100,7 @@ class Wifite(HackingTool):
     PROJECT_URL = "https://github.com/derv82/wifite2"
 
 
-class EvilTwin(HackingTool):
+class EvilTwin(KryptonHub):
     TITLE = "EvilTwin"
     DESCRIPTION = "Fakeap is a script to perform Evil Twin Attack, by getting" \
                   " credentials using a Fake page and Fake Access Point"
@@ -109,7 +109,7 @@ class EvilTwin(HackingTool):
     PROJECT_URL = "https://github.com/Z4nzu/fakeap"
 
 
-class Fastssh(HackingTool):
+class Fastssh(KryptonHub):
     TITLE = "Fastssh"
     DESCRIPTION = "Fastssh is an Shell Script to perform multi-threaded scan" \
                   " \n and brute force attack against SSH protocol using the " \
@@ -122,7 +122,7 @@ class Fastssh(HackingTool):
     PROJECT_URL = "https://github.com/Z4nzu/fastssh"
 
 
-class Howmanypeople(HackingTool):
+class Howmanypeople(KryptonHub):
     TITLE = "Howmanypeople"
     DESCRIPTION = "Count the number of people around you by monitoring wifi " \
                   "signals.\n" \

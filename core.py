@@ -143,7 +143,7 @@ class KryptonHub(object):
 
 
 class HackingToolsCollection(object):
-    TITLE: str = ""  # used to show info in the menu
+    TITLE: str = ""
     DESCRIPTION: str = ""
     TOOLS = []  # type: List[Any[KryptonHub, HackingToolsCollection]]
 

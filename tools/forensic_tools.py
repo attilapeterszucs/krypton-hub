@@ -1,11 +1,11 @@
 # coding=utf-8
 import os
 
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class Autopsy(HackingTool):
+class Autopsy(KryptonHub):
     TITLE = "Autopsy"
     DESCRIPTION = "Autopsy is a platform that is used by Cyber Investigators.\n" \
                   "[!] Works in any Os\n" \
@@ -17,7 +17,7 @@ class Autopsy(HackingTool):
         super(Autopsy, self).__init__(installable = False)
 
 
-class Wireshark(HackingTool):
+class Wireshark(KryptonHub):
     TITLE = "Wireshark"
     DESCRIPTION = "Wireshark is a network capture and analyzer \n" \
                   "tool to see what’s happening in your network.\n " \
@@ -28,7 +28,7 @@ class Wireshark(HackingTool):
         super(Wireshark, self).__init__(installable = False)
 
 
-class BulkExtractor(HackingTool):
+class BulkExtractor(KryptonHub):
     TITLE = "Bulk extractor"
     DESCRIPTION = "Extract useful information without parsing the file system"
     PROJECT_URL = "https://github.com/simsong/bulk_extractor"
@@ -56,7 +56,7 @@ class BulkExtractor(HackingTool):
             'echo "bulk_extractor [options] imagefile" | boxes -d headline | lolcat')
 
 
-class Guymager(HackingTool):
+class Guymager(KryptonHub):
     TITLE = "Disk Clone and ISO Image Aquire"
     DESCRIPTION = "Guymager is a free forensic imager for media acquisition."
     INSTALL_COMMANDS = ["sudo apt install guymager"]
@@ -64,7 +64,7 @@ class Guymager(HackingTool):
     PROJECT_URL = "https://guymager.sourceforge.io/"
 
 
-class Toolsley(HackingTool):
+class Toolsley(KryptonHub):
     TITLE = "Toolsley"
     DESCRIPTION = "Toolsley got more than ten useful tools for investigation.\n" \
                   "[+]File signature verifier\n" \

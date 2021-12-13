@@ -1,9 +1,9 @@
 # coding=utf-8
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class Cupp(HackingTool):
+class Cupp(KryptonHub):
     TITLE = "Cupp"
     DESCRIPTION = "WlCreator is a C program that can create all possibilities of passwords,\n " \
                   "and you can choose Length, Lowercase, Capital, Numbers and Special Chars"
@@ -12,7 +12,7 @@ class Cupp(HackingTool):
     PROJECT_URL = "https://github.com/Mebus/cupp"
 
 
-class WlCreator(HackingTool):
+class WlCreator(KryptonHub):
     TITLE = "WordlistCreator"
     DESCRIPTION = "WlCreator is a C program that can create all possibilities" \
                   " of passwords,\n and you can choose Lenght, Lowercase, " \
@@ -23,7 +23,7 @@ class WlCreator(HackingTool):
     PROJECT_URL = "https://github.com/Z4nzu/wlcreator"
 
 
-class GoblinWordGenerator(HackingTool):
+class GoblinWordGenerator(KryptonHub):
     TITLE = "Goblin WordGenerator"
     DESCRIPTION = "Goblin WordGenerator"
     INSTALL_COMMANDS = [
@@ -32,7 +32,7 @@ class GoblinWordGenerator(HackingTool):
     PROJECT_URL = "https://github.com/UndeadSec/GoblinWordGenerator.git"
 
 
-class showme(HackingTool):
+class showme(KryptonHub):
     TITLE = "Password list (1.4 Billion Clear Text Password)"
     DESCRIPTION = "This tool allows you to perform OSINT and reconnaissance on " \
                   "an organisation or an individual. It allows one to search " \

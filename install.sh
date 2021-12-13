@@ -13,6 +13,7 @@ echo -e ${CYAN}"Select Operating System: "
 echo ""
 echo -e "${WHITE}        [1] Kali Linux / Parrot-Os "
 echo -e "${WHITE}        [0] Exit "
+echo ""
 echo -n -e "Krypton >> "
 read choice
 INSTALL_DIR="/usr/share/doc/krypton-hub"

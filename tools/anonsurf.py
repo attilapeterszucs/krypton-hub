@@ -1,11 +1,11 @@
 # coding=utf-8
 import os
 
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class AnonymouslySurf(HackingTool):
+class AnonymouslySurf(KryptonHub):
     TITLE = "Anonymously Surf"
     DESCRIPTION = "It automatically overwrites the RAM when\n" \
                   "the system is shutting down and also change Ip."
@@ -23,7 +23,7 @@ class AnonymouslySurf(HackingTool):
         os.system("sudo anonsurf stop")
 
 
-class Multitor(HackingTool):
+class Multitor(KryptonHub):
     TITLE = "Multitor"
     DESCRIPTION = "How to stay in multi places at the same time"
     INSTALL_COMMANDS = [

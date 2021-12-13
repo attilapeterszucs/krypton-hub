@@ -2,11 +2,11 @@
 import os
 import subprocess
 
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class SlowLoris(HackingTool):
+class SlowLoris(KryptonHub):
     TITLE = "SlowLoris"
     DESCRIPTION = "Slowloris is basically an HTTP Denial of Service attack." \
                   "It send lots of HTTP Request"
@@ -17,7 +17,7 @@ class SlowLoris(HackingTool):
         subprocess.run(["slowloris", target_site])
 
 
-class Asyncrone(HackingTool):
+class Asyncrone(KryptonHub):
     TITLE = "Asyncrone | Multifunction SYN Flood DDoS Weapon"
     DESCRIPTION = "aSYNcrone is a C language based, mulltifunction SYN Flood " \
                   "DDoS Weapon.\nDisable the destination system by sending a " \
@@ -37,7 +37,7 @@ class Asyncrone(HackingTool):
             "sudo", "./aSYNcrone", source_port, target_ip, target_port, 1000])
 
 
-class UFONet(HackingTool):
+class UFONet(KryptonHub):
     TITLE = "UFOnet"
     DESCRIPTION = "UFONet - is a free software, P2P and cryptographic " \
                   "-disruptive \n toolkit- that allows to perform DoS and " \
@@ -51,7 +51,7 @@ class UFONet(HackingTool):
     PROJECT_URL = "https://github.com/epsylon/ufonet"
 
 
-class GoldenEye(HackingTool):
+class GoldenEye(KryptonHub):
     TITLE = "GoldenEye"
     DESCRIPTION = "GoldenEye is an python3 app for SECURITY TESTING PURPOSES ONLY!\n" \
                   "GoldenEye is a HTTP DoS Test Tool."

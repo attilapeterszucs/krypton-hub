@@ -1,11 +1,11 @@
 # coding=utf-8
 import os
 
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class TheFatRat(HackingTool):
+class TheFatRat(KryptonHub):
     TITLE = "The FatRat"
     DESCRIPTION = "TheFatRat Provides An Easy way to create Backdoors and \n" \
                   "Payload which can bypass most anti-virus"
@@ -30,7 +30,7 @@ class TheFatRat(HackingTool):
         os.system("cd TheFatRat && sudo chmod +x chk_tools && ./chk_tools")
 
 
-class Brutal(HackingTool):
+class Brutal(KryptonHub):
     TITLE = "Brutal"
     DESCRIPTION = "Brutal is a toolkit to quickly create various payload," \
                   "powershell attack,\nvirus attack and launch listener for " \
@@ -56,7 +56,7 @@ class Brutal(HackingTool):
         """)
 
 
-class Stitch(HackingTool):
+class Stitch(KryptonHub):
     TITLE = "Stitch"
     DESCRIPTION = "Stitch is Cross Platform Python Remote Administrator Tool\n\t" \
                   "[!] Refer Below Link For Wins & MAc Os"
@@ -68,7 +68,7 @@ class Stitch(HackingTool):
     PROJECT_URL = "https://nathanlopez.github.io/Stitch"
 
 
-class MSFVenom(HackingTool):
+class MSFVenom(KryptonHub):
     TITLE = "MSFvenom Payload Creator"
     DESCRIPTION = "MSFvenom Payload Creator (MSFPC) is a wrapper to generate \n" \
                   "multiple types of payloads, based on users choice.\n" \
@@ -82,7 +82,7 @@ class MSFVenom(HackingTool):
     PROJECT_URL = "https://github.com/g0tmi1k/msfpc"
 
 
-class Venom(HackingTool):
+class Venom(KryptonHub):
     TITLE = "Venom Shellcode Generator"
     DESCRIPTION = "venom 1.0.11 (malicious_server) was build to take " \
                   "advantage of \n apache2 webserver to deliver payloads " \
@@ -96,7 +96,7 @@ class Venom(HackingTool):
     PROJECT_URL = "https://github.com/r00t-3xp10it/venom"
 
 
-class Spycam(HackingTool):
+class Spycam(KryptonHub):
     TITLE = "Spycam"
     DESCRIPTION = "Script to generate a Win32 payload that takes the webcam " \
                   "image every 1 minute and send it to the attacker"
@@ -108,7 +108,7 @@ class Spycam(HackingTool):
     PROJECT_URL = "https://github.com/indexnotfound404/spycam"
 
 
-class MobDroid(HackingTool):
+class MobDroid(KryptonHub):
     TITLE = "Mob-Droid"
     DESCRIPTION = "Mob-Droid helps you to generate metasploit payloads in " \
                   "easy way\n without typing long commands and save your time"
@@ -118,7 +118,7 @@ class MobDroid(HackingTool):
     PROJECT_URL = "https://github.com/kinghacker0/Mob-Droid"
 
 
-class Enigma(HackingTool):
+class Enigma(KryptonHub):
     TITLE = "Enigma"
     DESCRIPTION = "Enigma is a Multiplatform payload dropper"
     INSTALL_COMMANDS = [

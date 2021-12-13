@@ -4,12 +4,12 @@ import socket
 import subprocess
 import webbrowser
 
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 from core import clear_screen
 
 
-class NMAP(HackingTool):
+class NMAP(KryptonHub):
     TITLE = "Network Map (nmap)"
     DESCRIPTION = "Free and open source utility for network discovery and security auditing"
     INSTALL_COMMANDS = [
@@ -22,7 +22,7 @@ class NMAP(HackingTool):
         super(NMAP, self).__init__(runnable = False)
 
 
-class Dracnmap(HackingTool):
+class Dracnmap(KryptonHub):
     TITLE = "Dracnmap"
     DESCRIPTION = "Dracnmap is an open source program which is using to \n" \
                   "exploit the network and gathering information with nmap help."
@@ -37,7 +37,7 @@ class Dracnmap(HackingTool):
 #        super(Dracnmap, self).__init__(runnable = False)
 
 
-class PortScan(HackingTool):
+class PortScan(KryptonHub):
     TITLE = "Port scanning"
 
     def __init__(self):
@@ -49,7 +49,7 @@ class PortScan(HackingTool):
         subprocess.run(["sudo", "nmap", "-O", "-Pn", target])
 
 
-class Host2IP(HackingTool):
+class Host2IP(KryptonHub):
     TITLE = "Host to IP "
 
     def __init__(self):
@@ -62,7 +62,7 @@ class Host2IP(HackingTool):
         print(ips)
 
 
-class XeroSploit(HackingTool):
+class XeroSploit(KryptonHub):
     TITLE = "Xerosploit"
     DESCRIPTION = "Xerosploit is a penetration testing toolkit whose goal is to perform\n" \
                   "man-in-the-middle attacks for testing purposes"
@@ -74,7 +74,7 @@ class XeroSploit(HackingTool):
     PROJECT_URL = "https://github.com/LionSec/xerosploit"
 
 
-class RedHawk(HackingTool):
+class RedHawk(KryptonHub):
     TITLE = "RED HAWK (All In One Scanning)"
     DESCRIPTION = "All in one tool for Information Gathering and Vulnerability Scanning."
     INSTALL_COMMANDS = [
@@ -83,7 +83,7 @@ class RedHawk(HackingTool):
     PROJECT_URL = "https://github.com/Tuhinshubhra/RED_HAWK"
 
 
-class ReconSpider(HackingTool):
+class ReconSpider(KryptonHub):
     TITLE = "ReconSpider(For All Scaning)"
     DESCRIPTION = "ReconSpider is most Advanced Open Source Intelligence (OSINT)" \
                   " Framework for scanning IP Address, Emails, \n" \
@@ -100,7 +100,7 @@ class ReconSpider(HackingTool):
 #        super(ReconSpider, self).__init__(runnable = False)
 
 
-class IsItDown(HackingTool):
+class IsItDown(KryptonHub):
     TITLE = "IsItDown (Check Website Down/Up)"
     DESCRIPTION = "Check Website Is Online or Not"
 
@@ -112,7 +112,7 @@ class IsItDown(HackingTool):
         webbrowser.open_new_tab("https://www.isitdownrightnow.com/")
 
 
-class Infoga(HackingTool):
+class Infoga(KryptonHub):
     TITLE = "Infoga - Email OSINT"
     DESCRIPTION = "Infoga is a tool gathering email accounts informations\n" \
                   "(ip, hostname, country,...) from different public source"
@@ -124,7 +124,7 @@ class Infoga(HackingTool):
     PROJECT_URL = "https://github.com/m4ll0k/Infoga"
 
 
-class ReconDog(HackingTool):
+class ReconDog(KryptonHub):
     TITLE = "ReconDog"
     DESCRIPTION = "ReconDog Information Gathering Suite"
     INSTALL_COMMANDS = ["git clone https://github.com/s0md3v/ReconDog.git"]
@@ -132,7 +132,7 @@ class ReconDog(HackingTool):
     PROJECT_URL = "https://github.com/s0md3v/ReconDog"
 
 
-class Striker(HackingTool):
+class Striker(KryptonHub):
     TITLE = "Striker"
     DESCRIPTION = "Recon & Vulnerability Scanning Suite"
     INSTALL_COMMANDS = [
@@ -147,7 +147,7 @@ class Striker(HackingTool):
         subprocess.run(["sudo", "python3", "striker.py", site])
 
 
-class SecretFinder(HackingTool):
+class SecretFinder(KryptonHub):
     TITLE = "SecretFinder (like API & etc)"
     DESCRIPTION = "SecretFinder - A python script for find sensitive data \n" \
                   "like apikeys, accesstoken, authorizations, jwt,..etc \n " \
@@ -163,7 +163,7 @@ class SecretFinder(HackingTool):
         super(SecretFinder, self).__init__(runnable = False)
 
 
-class Shodan(HackingTool):
+class Shodan(KryptonHub):
     TITLE = "Find Info Using Shodan"
     DESCRIPTION = "Get ports, vulnerabilities, informations, banners,..etc \n " \
                   "for any IP with Shodan (no apikey! no rate limit!)\n" \
@@ -175,7 +175,7 @@ class Shodan(HackingTool):
         super(Shodan, self).__init__(runnable = False)
 
 
-class PortScannerRanger(HackingTool):
+class PortScannerRanger(KryptonHub):
     TITLE = "Port Scanner - rang3r"
     DESCRIPTION = "rang3r is a python script which scans in multi thread\n " \
                   "all alive hosts within your range that you specify."
@@ -190,7 +190,7 @@ class PortScannerRanger(HackingTool):
         subprocess.run(["sudo", "python", "rang3r.py", "--ip", ip])
 
 
-class Breacher(HackingTool):
+class Breacher(KryptonHub):
     TITLE = "Breacher"
     DESCRIPTION = "An advanced multithreaded admin panel finder written in python."
     INSTALL_COMMANDS = ["git clone https://github.com/s0md3v/Breacher.git"]

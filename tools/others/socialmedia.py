@@ -2,11 +2,11 @@
 import os
 import subprocess
 
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class InstaBrute(HackingTool):
+class InstaBrute(KryptonHub):
     TITLE = "Instagram Attack"
     DESCRIPTION = "Brute force attack against Instagram"
     INSTALL_COMMANDS = [
@@ -24,7 +24,7 @@ class InstaBrute(HackingTool):
              f"{wordlist}"])
 
 
-class BruteForce(HackingTool):
+class BruteForce(KryptonHub):
     TITLE = "AllinOne SocialMedia Attack"
     DESCRIPTION = "Brute_Force_Attack Gmail Hotmail Twitter Facebook Netflix \n" \
                   "[!] python3 Brute_Force.py -g <Account@gmail.com> -l <File_list>"
@@ -36,7 +36,7 @@ class BruteForce(HackingTool):
     PROJECT_URL = "https://github.com/Matrix07ksa/Brute_Force"
 
 
-class Faceshell(HackingTool):
+class Faceshell(KryptonHub):
     TITLE = "Facebook Attack"
     DESCRIPTION = "Facebook BruteForcer"
     INSTALL_COMMANDS = [
@@ -53,7 +53,7 @@ class Faceshell(HackingTool):
             ["python3", "Brute_Force.py", "-f", f"{name}", "-l", f"{wordlist}"])
 
 
-class AppCheck(HackingTool):
+class AppCheck(KryptonHub):
     TITLE = "Application Checker"
     DESCRIPTION = "Tool to check if an app is installed on the target device through a link."
     INSTALL_COMMANDS = [

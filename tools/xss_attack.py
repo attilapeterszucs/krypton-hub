@@ -2,11 +2,11 @@
 import os
 import subprocess
 
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class Dalfox(HackingTool):
+class Dalfox(KryptonHub):
     TITLE = "DalFox(Finder of XSS)"
     DESCRIPTION = "XSS Scanning and Parameter Analysis tool."
     INSTALL_COMMANDS = [
@@ -21,7 +21,7 @@ class Dalfox(HackingTool):
     PROJECT_URL = "https://github.com/hahwul/dalfox"
 
 
-class XSSPayloadGenerator(HackingTool):
+class XSSPayloadGenerator(KryptonHub):
     TITLE = "XSS Payload Generator"
     DESCRIPTION = "XSS PAYLOAD GENERATOR -XSS SCANNER-XSS DORK FINDER"
     INSTALL_COMMANDS = [
@@ -32,7 +32,7 @@ class XSSPayloadGenerator(HackingTool):
     PROJECT_URL = "https://github.com/capture0x/XSS-LOADER.git"
 
 
-class XSSFinder(HackingTool):
+class XSSFinder(KryptonHub):
     TITLE = "Extended XSS Searcher and Finder"
     DESCRIPTION = "Extended XSS Searcher and Finder"
     INSTALL_COMMANDS = [
@@ -56,7 +56,7 @@ class XSSFinder(HackingTool):
         """)
 
 
-class XSSFreak(HackingTool):
+class XSSFreak(KryptonHub):
     TITLE = "XSS-Freak"
     DESCRIPTION = "XSS-Freak is an XSS scanner fully written in python3 from scratch"
     INSTALL_COMMANDS = [
@@ -67,7 +67,7 @@ class XSSFreak(HackingTool):
     PROJECT_URL = "https://github.com/PR0PH3CY33/XSS-Freak"
 
 
-class XSpear(HackingTool):
+class XSpear(KryptonHub):
     TITLE = "XSpear"
     DESCRIPTION = "XSpear is XSS Scanner on ruby gems"
     INSTALL_COMMANDS = ["gem install XSpear"]
@@ -75,7 +75,7 @@ class XSpear(HackingTool):
     PROJECT_URL = "https://github.com/hahwul/XSpear"
 
 
-class XSSCon(HackingTool):
+class XSSCon(KryptonHub):
     TITLE = "XSSCon"
     INSTALL_COMMANDS = [
         "git clone https://github.com/menkrep1337/XSSCon.git",
@@ -89,7 +89,7 @@ class XSSCon(HackingTool):
         subprocess.run(["python3", "xsscon.py", "-u", website])
 
 
-class XanXSS(HackingTool):
+class XanXSS(KryptonHub):
     TITLE = "XanXSS"
     DESCRIPTION = "XanXSS is a reflected XSS searching tool\n " \
                   "that creates payloads based from templates"
@@ -102,7 +102,7 @@ class XanXSS(HackingTool):
               " [!]python xanxss.py [Options]")
 
 
-class XSSStrike(HackingTool):
+class XSSStrike(KryptonHub):
     TITLE = "Advanced XSS Detection Suite"
     DESCRIPTION = "XSStrike is a python script designed to detect and exploit XSS vulnerabilites."
     INSTALL_COMMANDS = [
@@ -116,7 +116,7 @@ class XSSStrike(HackingTool):
         super(XSSStrike, self).__init__(runnable = False)
 
 
-class RVuln(HackingTool):
+class RVuln(KryptonHub):
     TITLE = "RVuln"
     DESCRIPTION = "RVuln is multi-threaded and Automated Web Vulnerability " \
                   "Scanner written in Rust"

@@ -1,9 +1,9 @@
 # coding=utf-8
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class EvilURL(HackingTool):
+class EvilURL(KryptonHub):
     TITLE = "EvilURL"
     DESCRIPTION = "Generate unicode evil domains for IDN Homograph Attack " \
                   "and detect them."

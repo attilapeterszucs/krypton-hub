@@ -1,9 +1,9 @@
 # coding=utf-8
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class Stitch(HackingTool):
+class Stitch(KryptonHub):
     TITLE = "Stitch"
     DESCRIPTION = "Stitch is a cross platform python framework.\n" \
                   "which allows you to build custom payloads\n" \
@@ -16,7 +16,7 @@ class Stitch(HackingTool):
     PROJECT_URL = "https://github.com/nathanlopez/Stitch"
 
 
-class Pyshell(HackingTool):
+class Pyshell(KryptonHub):
     TITLE = "Pyshell"
     DESCRIPTION = "Pyshell is a Rat Tool that can be able to download & upload " \
                   "files,\n Execute OS Command and more.."

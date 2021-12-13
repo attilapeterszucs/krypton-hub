@@ -1,9 +1,9 @@
 # coding=utf-8
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class KnockMail(HackingTool):
+class KnockMail(KryptonHub):
     TITLE = "Knockmail"
     DESCRIPTION = "KnockMail Tool Verify If Email Exists"
     INSTALL_COMMANDS = [

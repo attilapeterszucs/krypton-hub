@@ -2,11 +2,11 @@
 import os
 import subprocess
 
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class FacialFind(HackingTool):
+class FacialFind(KryptonHub):
     TITLE = "Find SocialMedia By Facial Recognation System"
     DESCRIPTION = "A Social Media Mapping Tool that correlates profiles\n " \
                   "via facial recognition across different sites."
@@ -36,7 +36,7 @@ class FacialFind(HackingTool):
             'echo "python social_mapper.py -f [<imageFoldername>] -i [<imgFolderPath>] -m fast [<AcName>] -fb -tw"| boxes | lolcat')
 
 
-class FindUser(HackingTool):
+class FindUser(KryptonHub):
     TITLE = "Find SocialMedia By UserName"
     DESCRIPTION = "Find usernames across over 75 social networks"
     INSTALL_COMMANDS = [
@@ -47,7 +47,7 @@ class FindUser(HackingTool):
     PROJECT_URL = "https://github.com/xHak9x/finduser"
 
 
-class Sherlock(HackingTool):
+class Sherlock(KryptonHub):
     TITLE = "Sherlock"
     DESCRIPTION = "Hunt down social media accounts by username across social networks \n " \
                   "For More Usege \n" \
@@ -64,7 +64,7 @@ class Sherlock(HackingTool):
         subprocess.run(["sudo", "python3", "sherlock", f"{name}"])
 
 
-class SocialScan(HackingTool):
+class SocialScan(KryptonHub):
     TITLE = "SocialScan | Username or Email"
     DESCRIPTION = "Check email address and username availability on online " \
                   "platforms with 100% accuracy"

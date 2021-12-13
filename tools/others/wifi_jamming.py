@@ -1,9 +1,9 @@
 # coding=utf-8
-from core import HackingTool
+from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class WifiJammerNG(HackingTool):
+class WifiJammerNG(KryptonHub):
     TITLE = "WifiJammer-NG"
     DESCRIPTION = "Continuously jam all wifi clients and access points within range."
     INSTALL_COMMANDS = [
@@ -17,7 +17,7 @@ class WifiJammerNG(HackingTool):
     PROJECT_URL = "https://github.com/MisterBianco/wifijammer-ng"
 
 
-class KawaiiDeauther(HackingTool):
+class KawaiiDeauther(KryptonHub):
     TITLE = "KawaiiDeauther"
     DESCRIPTION = "Kawaii Deauther is a pentest toolkit whose goal is to perform \n " \
                   "jam on WiFi clients/routers and spam many fake AP for testing purposes."
