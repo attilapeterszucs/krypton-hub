@@ -56,8 +56,8 @@ if [ $choice == 1 ]; then
 		git clone https://github.com/JustKKrypton/krypton-hub.git "$INSTALL_DIR";
 		echo "#!/bin/bash
 		python3 $INSTALL_DIR/Krypton-Hub.py" '${1+"$@"}' > kryptonhub;
-		sudo chmod +x hackingtool;
-		sudo cp hackingtool /usr/bin/;
+		sudo chmod +x krypton-hub;
+		sudo cp krypton-hub /usr/bin/;
 		rm krypton-hub;
 		echo ""; 
 		echo "[✔] Trying to installing Requirements ..."
