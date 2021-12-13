@@ -1,3 +1,17 @@
+clear
+
+BLACK='\e[30m'
+RED='\e[31m'
+GREEN='\e[92m'
+YELLOW='\e[33m'
+ORANGE='\e[93m'
+BLUE='\e[34m'
+PURPLE='\e[35m'
+CYAN='\e[36m'
+WHITE='\e[37m'
+NC='\e[0m'
+purple='\033[35m'
+
 echo " _   __                 _                _   _       _     "
 echo "| | / /                | |              | | | |     | |    "
 echo "| |/ / _ __ _   _ _ __ | |_ ___  _ __   | |_| |_   _| |__  "
@@ -6,8 +20,8 @@ echo "| |\  \ |  | |_| | |_) | || (_) | | | | | | | | |_| | |_) |"
 echo "\_| \_/_|   \__, | .__/ \__\___/|_| |_| \_| |_/\__,_|_.__/ "
 echo "             __/ | |                                       "
 echo "            |___/|_|                                       "
-
-echo -e "${RED}[!] You Have to Run This Tool As Root [!]"
+echo ""
+echo -e "${RED}[!] You Have to Run This Tool As Root [!]${NC}"
 echo ""
 echo -e ${CYAN}"Select Operating System: "
 echo ""
@@ -16,6 +30,7 @@ echo -e "${WHITE}        [0] Exit "
 echo ""
 echo -n -e "Krypton >> "
 read choice
+
 INSTALL_DIR="/usr/share/doc/krypton-hub"
 BIN_DIR="/usr/bin/"
 if [ $choice == 1 ]; then 
