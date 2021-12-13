@@ -1,3 +1,4 @@
+#!/bin/bash
 clear
 
 BLACK='\e[30m'
