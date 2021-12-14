@@ -158,9 +158,13 @@ class HackingToolsCollection(object):
     def show_options(self, parent = None):
         clear_screen()
         self.show_info()
+        print("----------------------------------------------")
         for index, tool in enumerate(self.TOOLS):
-            print(f"[{index} {tool.TITLE}")
+            print(f"| ({index}) {tool.TITLE}                    |")
+        print("----------------------------------------------")
         print(f"[{99}] Back to {parent.TITLE if parent is not None else 'Exit'}")
+        print("----------------------------------------------")
+        print("")
         tool_index = input("Choose a tool to proceed: ")
         try:
             tool_index = int(tool_index)
