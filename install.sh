@@ -35,16 +35,15 @@ echo ""
 INSTALL_DIR="/usr/share/doc/krypton-hub"
 BIN_DIR="/usr/bin/"
 if [ $choice == 1 ]; then 
-	echo "[*] Checking Internet Connection .."
+	echo -e $YELLOW"[*] Checking Internet Connection .."
 	wget -q --tries=10 --timeout=20 --spider https://google.com
 	if [[ $? -eq 0 ]]; then
 		echo ""
-	    echo -e $YELLOW"[✔] Loading ... "
-		echo -e ${BLUE}""
+	    echo -e $YELLOW"[✔] Loading ... ${BLUE}"
 	    sudo apt-get update && apt-get upgrade 
 	    sudo apt-get install python-pip
 		echo ""
-	    echo -e $YELLOW"[✔] Checking directories..."
+	    echo -e $YELLOW"[✔] Checking directories... ${BLUE}"
 		echo ""
 	    if [ -d "$INSTALL_DIR" ]; then
 	        echo -e $RED"[!] A Directory krypton-hub Was Found.. Do You Want To Replace It ? [y/n]:" ;
@@ -56,7 +55,7 @@ if [ $choice == 1 ]; then
 	        fi
 	    fi
 			echo ""
-    		echo -e $YELLOW"[✔] Installing ...";
+    		echo -e $YELLOW"[✔] Installing ... ${BLUE}";
 		echo "";
 		git clone https://github.com/JustKKrypton/krypton-hub.git "$INSTALL_DIR";
 		echo "#!/bin/bash
@@ -65,7 +64,7 @@ if [ $choice == 1 ]; then
 		sudo cp kryptonhub /usr/bin/;
 		rm kryptonhub;
 		echo ""; 
-		echo -e $YELLOW"[✔] Installing Requirements ..."
+		echo -e $YELLOW"[✔] Installing Requirements ... ${BLUE}"
 		echo ""
 		sudo pip3 install lolcat
 		sudo apt-get install -y figlet
@@ -75,7 +74,7 @@ if [ $choice == 1 ]; then
 		sudo pip3 install requests
 	else 
 		echo ""
-		echo -e $RED "[!] Please Check Your Internet Connection ..!!"
+		echo -e $RED "[!] Please Check Your Internet Connection ..!! ${BLUE}"
 		echo ""
 	fi
 
