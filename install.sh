@@ -43,7 +43,7 @@ if [ $choice == 1 ]; then
 	    sudo apt-get update && apt-get upgrade 
 	    sudo apt-get install python-pip
 		echo ""
-	    echo "[✔] Checking directories..."
+	    echo "${GREEN}[✔] Checking directories..."
 	    if [ -d "$INSTALL_DIR" ]; then
 	        echo "[!] A Directory krypton-hub Was Found.. Do You Want To Replace It ? [y/n]:" ;
 	        read input
@@ -54,7 +54,7 @@ if [ $choice == 1 ]; then
 	        fi
 	    fi
 			echo ""
-    		echo "[✔] Installing ...";
+    		echo "${GREEN}[✔] Installing ...";
 		echo "";
 		git clone https://github.com/JustKKrypton/krypton-hub.git "$INSTALL_DIR";
 		echo "#!/bin/bash
@@ -63,7 +63,7 @@ if [ $choice == 1 ]; then
 		sudo cp krypton-hub /usr/bin/;
 		rm krypton-hub;
 		echo ""; 
-		echo "[✔] Trying to installing Requirements ..."
+		echo "${GREEN}[✔] Installing Requirements ..."
 		sudo pip3 install lolcat
 		sudo apt-get install -y figlet
 		sudo pip3 install boxes
@@ -76,7 +76,7 @@ if [ $choice == 1 ]; then
 
     if [ -d "$INSTALL_DIR" ]; then
         echo "";
-        echo "[✔] Successfully Installed !!! ";
+        echo "${GREEN}[✔] Successfully Installed !!! ";
         echo "";
         echo "";
         echo -e $ORANGE "		[+]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[+]"
