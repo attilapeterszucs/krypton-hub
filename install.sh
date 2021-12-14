@@ -31,16 +31,18 @@ echo -e "${WHITE}        [0] Exit "
 echo ""
 echo -n -e "Krypton >> "
 read choice
-
+echo ""
 INSTALL_DIR="/usr/share/doc/krypton-hub"
 BIN_DIR="/usr/bin/"
 if [ $choice == 1 ]; then 
 	echo "[*] Checking Internet Connection .."
 	wget -q --tries=10 --timeout=20 --spider https://google.com
 	if [[ $? -eq 0 ]]; then
+		echo ""
 	    echo -e ${BLUE}"[✔] Loading ... "
 	    sudo apt-get update && apt-get upgrade 
 	    sudo apt-get install python-pip
+		echo ""
 	    echo "[✔] Checking directories..."
 	    if [ -d "$INSTALL_DIR" ]; then
 	        echo "[!] A Directory krypton-hub Was Found.. Do You Want To Replace It ? [y/n]:" ;
@@ -51,6 +53,7 @@ if [ $choice == 1 ]; then
 	            exit
 	        fi
 	    fi
+			echo ""
     		echo "[✔] Installing ...";
 		echo "";
 		git clone https://github.com/JustKKrypton/krypton-hub.git "$INSTALL_DIR";
