@@ -161,7 +161,6 @@ class HackingToolsCollection(object):
     def show_options(self, parent = None):
         clear_screen()
         self.show_info()
-        print("")
         print("----------------------------------------------")
         for index, tool in enumerate(self.TOOLS):
             print(f"| ({index}) {tool.TITLE}")
