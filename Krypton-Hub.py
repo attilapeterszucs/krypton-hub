@@ -54,7 +54,11 @@ logo = """\033[33m
     | |\  \ |  | |_| | |_) | || (_) | | | | | | | | |_| | |_) |
     \_| \_/_|   \__, | .__/ \__\___/|_| |_| \_| |_/\__,_|_.__/ 
                  __/ | |                                       
-                |___/|_|                                       
+                |___/|_|  
+
+\033[34m[✔]                 Version 1.1.8                [✔]
+\033[91m[X]     Please Don't Use For illegal Activity     [X]
+\033[91m[X]  I'm not responsible for any damage you make! [X]\033[97m                                     
 \033[97m """
 
 
@@ -248,7 +252,7 @@ def diagnostic():
     if sysOS == "Windows":
         os.system("cls")
 
-    logo()
+    logo
     print("\n")
     print("\nDetecting System...")
     sleep(1)
@@ -262,7 +266,7 @@ def diagnostic():
 
 
 def tool_install_run():
-    logo()
+    print(logo)
     print("\n\n-------------------------------------------")
     print("| (0) Install")
     print("| (1) Run")
