@@ -158,9 +158,9 @@ class HackingToolsCollection(object):
     def show_options(self, parent = None):
         clear_screen()
         self.show_info()
-        print("\033[34m[✔]                 Version 1.1.7                [✔]")
-        print("\033[91m[X]     Please Don't Use For illegal Activity     [X]")
-        print("\033[91m[X]  I'm not responsible for any damage you make! [X]\033[97m")
+        print("     \033[34m[✔]                 Version 1.1.7                [✔]")
+        print("     \033[91m[X]     Please Don't Use For illegal Activity     [X]")
+        print("     \033[91m[X]  I'm not responsible for any damage you make! [X]\033[97m")
         print("")
         print("----------------------------------------------")
         for index, tool in enumerate(self.TOOLS):
