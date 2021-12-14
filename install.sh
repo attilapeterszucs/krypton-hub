@@ -59,9 +59,9 @@ if [ $choice == 1 ]; then
 		git clone https://github.com/JustKKrypton/krypton-hub.git "$INSTALL_DIR";
 		echo "#!/bin/bash
 		python3 $INSTALL_DIR/Krypton-Hub.py" '${1+"$@"}' > kryptonhub;
-		sudo chmod +x krypton-hub;
-		sudo cp krypton-hub /usr/bin/;
-		rm krypton-hub;
+		sudo chmod +x kryptonhub;
+		sudo cp kryptonhub /usr/bin/;
+		rm kryptonhub;
 		echo ""; 
 		echo "${GREEN}[✔] Installing Requirements ..."
 		sudo pip3 install lolcat
