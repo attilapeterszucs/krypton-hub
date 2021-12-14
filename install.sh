@@ -40,6 +40,7 @@ if [ $choice == 1 ]; then
 	if [[ $? -eq 0 ]]; then
 		echo ""
 	    echo -e $YELLOW"[✔] Loading ... ${BLUE}"
+		echo ""
 	    sudo apt-get update && apt-get upgrade 
 	    sudo apt-get install python-pip
 		echo ""
