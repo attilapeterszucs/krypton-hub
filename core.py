@@ -68,11 +68,14 @@ class KryptonHub(object):
     def show_options(self, parent = None):
         clear_screen()
         self.show_info()
+        print("------------------------")
         for index, option in enumerate(self.OPTIONS):
-            print(f"[{index + 1}] {option[0]}")
+            print(f"| ({index + 1}) {option[0]}")
         if self.PROJECT_URL:
-            print(f"[{98}] Open project page")
-        print(f"[{99}] Back to {parent.TITLE if parent is not None else 'Exit'}")
+            print(f"| ({98}) Open project page")
+        print("------------------------")
+        print(f"| ({99}) Back to {parent.TITLE if parent is not None else 'Exit'}")
+        print("------------------------")
         option_index = input("Select an option : ")
         try:
             option_index = int(option_index)
