@@ -158,11 +158,15 @@ class HackingToolsCollection(object):
     def show_options(self, parent = None):
         clear_screen()
         self.show_info()
+        print("\033[34m[✔]                 Version 1.1.7                [✔]")
+        print("\033[91m[X]     Please Don't Use For illegal Activity     [X]")
+        print("\033[91m[X]  I'm not responsible for any damage you make! [X]\033[97m")
+        print("")
         print("----------------------------------------------")
         for index, tool in enumerate(self.TOOLS):
-            print(f"| ({index}) {tool.TITLE}                    |")
+            print(f"| ({index}) {tool.TITLE}")
         print("----------------------------------------------")
-        print(f"[{99}] Back to {parent.TITLE if parent is not None else 'Exit'}")
+        print(f"| ({99}) Back to {parent.TITLE if parent is not None else 'Exit'}")
         print("----------------------------------------------")
         print("")
         tool_index = input("Choose a tool to proceed: ")

@@ -40,11 +40,14 @@ if [ $choice == 1 ]; then
 	if [[ $? -eq 0 ]]; then
 		echo ""
 	    echo -e ${BLUE}"[✔] Loading ... "
+		echo ""
 	    sudo apt-get update && apt-get upgrade 
 	    sudo apt-get install python-pip
 		echo ""
-	    echo "${GREEN}[✔] Checking directories..."
+	    echo "[✔] Checking directories..."
+		echo ""
 	    if [ -d "$INSTALL_DIR" ]; then
+			echo ""
 	        echo "[!] A Directory krypton-hub Was Found.. Do You Want To Replace It ? [y/n]:" ;
 	        read input
 	        if [ "$input" = "y" ]; then
@@ -54,7 +57,7 @@ if [ $choice == 1 ]; then
 	        fi
 	    fi
 			echo ""
-    		echo "${GREEN}[✔] Installing ...";
+    		echo "[✔] Installing ...";
 		echo "";
 		git clone https://github.com/JustKKrypton/krypton-hub.git "$INSTALL_DIR";
 		echo "#!/bin/bash
@@ -63,7 +66,8 @@ if [ $choice == 1 ]; then
 		sudo cp kryptonhub /usr/bin/;
 		rm kryptonhub;
 		echo ""; 
-		echo "${GREEN}[✔] Installing Requirements ..."
+		echo "[✔] Installing Requirements ..."
+		echo ""
 		sudo pip3 install lolcat
 		sudo apt-get install -y figlet
 		sudo pip3 install boxes
@@ -71,12 +75,14 @@ if [ $choice == 1 ]; then
 		sudo pip3 install flask
 		sudo pip3 install requests
 	else 
+		echo ""
 		echo -e $RED "Please Check Your Internet Connection ..!!"
+		echo ""
 	fi
 
     if [ -d "$INSTALL_DIR" ]; then
         echo "";
-        echo "${GREEN}[✔] Successfully Installed !!! ";
+        echo -e $GREEN"[✔] Successfully Installed !!! ";
         echo "";
         echo "";
         echo -e $ORANGE "		[+]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[+]"
