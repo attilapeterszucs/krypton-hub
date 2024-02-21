@@ -62,6 +62,22 @@ class Host2IP(KryptonHub):
         print(ips)
 
 
+class httpX(KryptonHub):
+    TITLE = "httpX"
+    DESCRIPTION = "httpX is a fast and multi-purpose HTTP toolkit \n" \
+                  "that allows running multiple probes using the retryablehttp library. \n" \
+                  "It is designed to maintain result reliability with an increased number of threads. \n" \
+                  "Usage:\n\t" \
+                  "[*] httpx -h (help)"
+    INSTALL_COMMANDS = [
+        "sudo go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest"
+    ]
+    PROJECT_URL = "https://github.com/projectdiscovery/httpx"
+
+    def __init__(self):
+        super(httpX, self).__init__(runnable = False)
+
+
 class XeroSploit(KryptonHub):
     TITLE = "Xerosploit"
     DESCRIPTION = "Xerosploit is a penetration testing toolkit whose goal is to perform\n" \
@@ -201,6 +217,7 @@ class Breacher(KryptonHub):
         os.chdir("Breacher")
         subprocess.run(["python3", "breacher.py", "-u", domain])
 
+
 class InformationGatheringTools(HackingToolsCollection):
     TITLE = "Information gathering tools"
     TOOLS = [
@@ -208,6 +225,7 @@ class InformationGatheringTools(HackingToolsCollection):
         Dracnmap(),
         PortScan(),
         Host2IP(),
+        httpX(),
         XeroSploit(),
         RedHawk(),
         ReconSpider(),
