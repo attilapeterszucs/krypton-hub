@@ -70,6 +70,8 @@ class AllTools(HackingToolsCollection):
         print(logo + '\033[0m \033[97m')
 
 # --------------------------------------------------------------------------------------
+
+
 if __name__ == "__main__":
     try:
         if system() == 'Linux':
@@ -124,7 +126,7 @@ if __name__ == "__main__":
 
 def main_menu():
     os.system("clear")
-    logo()
+    print(logo)
     print("\n")
     print("        \033[34m[✔]                 Version 1.1.0                [✔]")
     print("        \033[91m[X]     Please Don't Use For illegal Activity     [X]")
@@ -162,7 +164,7 @@ def main_menu():
 
 def tools():
     os.system("clear")
-    logo()
+    print(logo)
     print("\n\n-------------------------------------------")
     print("| (0) Information Gathering")
     print("| (1) Wireless attacks")
@@ -178,19 +180,19 @@ def tools():
 
 def ping_attack():
     os.system("clear")
-    logo()
+    print(logo)
     print("\n")
     ipaddr = input("\nTarget Url/Ip: ")
     os.system("clear")
-    logo()
+    print(logo)
     print("\n")
     time = input("\nSet Amount: ")
     os.system("clear")
-    logo()
+    print(logo)
     print("\n")
     count = input("\nSet Count: ")
     os.system("clear")
-    logo()
+    print(logo)
     print("\n")
     print("-------------------------------------------")
     print("| Target: {}".format(ipaddr))
@@ -203,12 +205,12 @@ def ping_attack():
 
 def begin_attack():
     os.system("clear")
-    logo()
+    print(logo)
     print("\n")
     print("Begin Attack...")
     sleep(1)
     os.system("clear")
-    logo()
+    print(logo)
     print("\n")
     # os.system("ping  {}  ".format())
 
@@ -252,7 +254,7 @@ def diagnostic():
     if sysOS == "Windows":
         os.system("cls")
 
-    logo
+    print(logo)
     print("\n")
     print("\nDetecting System...")
     sleep(1)
@@ -262,7 +264,8 @@ def diagnostic():
     if sysOS == "Linux":
         main_menu()
     else:
-        print("\n           \033[91m[X] Your system is not Linux, You may not be able to run this script in some systems [X]\033[97m")
+        print("\n\033[91m[X] Your system is not Linux, "
+              "You may not be able to run this script in some systems [X]\033[97m")
 
 
 def tool_install_run():
