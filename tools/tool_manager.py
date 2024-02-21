@@ -6,7 +6,7 @@ from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class UpdateTool(object):
+class UpdateTool(KryptonHub):
     TITLE = "Update Tool or System"
     DESCRIPTION = "Update Tool or System"
 
@@ -16,12 +16,14 @@ class UpdateTool(object):
             ("Update KryptonHub", self.update_kh)
         ], installable = False, runnable = False)
 
+    @staticmethod
     def update_sys(self):
         os.system("sudo apt update && sudo apt full-upgrade -y")
         os.system(
             "sudo apt-get install tor openssl curl && sudo apt-get update tor openssl curl")
         os.system("sudo apt-get install python3-pip")
 
+    @staticmethod
     def update_kh(self):
         os.system("sudo chmod +x /etc/;"
                   "sudo chmod +x /usr/share/doc;"
