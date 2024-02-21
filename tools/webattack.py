@@ -44,6 +44,20 @@ class SubDomainFinder(KryptonHub):
     PROJECT_URL = "https://github.com/aboul3la/Sublist3r"
 
 
+class SubFinder(KryptonHub):
+    TITLE = "Subfinder"
+    DESCRIPTION = "Subfinder is a subdomain discovery tool that returns valid subdomains for websites," \
+                  "using passive online sources. \n " \
+                  "Usage:\n\t" \
+                  "[*] subfinder -h (help)"
+    INSTALL_COMMANDS = [
+        "sudo go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest",
+        "export PATH=$PATH:~/go/bin",
+        "source .bashrc"
+    ]
+    PROJECT_URL = "https://github.com/aboul3la/Sublist3r"
+
+
 class CheckURL(KryptonHub):
     TITLE = "CheckURL"
     DESCRIPTION = "Detect evil urls that uses IDN Homograph Attack.\n\t" \
