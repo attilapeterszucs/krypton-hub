@@ -35,7 +35,7 @@ class UpdateTool(KryptonHub):
                   "git clone https://github.com/attilapeterszucs/krypton-hub.git;"
                   "cd krypton-hub;"
                   "sudo chmod +x install.sh;"
-                  "./install.sh")
+                  "bash install.sh")
 
 
 class UninstallTool(KryptonHub):
