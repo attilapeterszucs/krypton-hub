@@ -55,7 +55,7 @@ class SubFinder(KryptonHub):
         "export PATH=$PATH:~/go/bin",
         "source .bashrc"
     ]
-    PROJECT_URL = "https://github.com/aboul3la/Sublist3r"
+    PROJECT_URL = "https://github.com/projectdiscovery/subfinder"
 
 
 class CheckURL(KryptonHub):
@@ -95,6 +95,7 @@ class SubDomainTakeOver(KryptonHub):
     def __init__(self):
         super(SubDomainTakeOver, self).__init__(runnable = False)
 
+
 class Dirb(KryptonHub):
     TITLE = "Dirb"
     DESCRIPTION = "DIRB is a Web Content Scanner. It looks for existing " \
@@ -119,6 +120,7 @@ class WebAttackTools(HackingToolsCollection):
         Web2Attack(),
         Skipfish(),
         SubDomainFinder(),
+        SubFinder(),
         CheckURL(),
         Blazy(),
         SubDomainTakeOver(),
