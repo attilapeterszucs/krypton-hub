@@ -57,6 +57,9 @@ class SubFinder(KryptonHub):
     ]
     PROJECT_URL = "https://github.com/projectdiscovery/subfinder"
 
+    def __init__(self):
+        super(SubFinder, self).__init__(runnable = False)
+
 
 class CheckURL(KryptonHub):
     TITLE = "CheckURL"
