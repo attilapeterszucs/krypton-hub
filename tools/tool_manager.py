@@ -16,14 +16,12 @@ class UpdateTool(KryptonHub):
             ("Update KryptonHub", self.update_kh)
         ], installable = False, runnable = False)
 
-    @staticmethod
     def update_sys(self):
         os.system("sudo apt update && sudo apt full-upgrade -y")
         os.system(
             "sudo apt-get install tor openssl curl && sudo apt-get update tor openssl curl")
         os.system("sudo apt-get install python3-pip")
 
-    @staticmethod
     def update_kh(self):
         os.system("sudo chmod +x /etc/;"
                   "sudo chmod +x /usr/share/doc;"
@@ -61,8 +59,8 @@ class UninstallTool(KryptonHub):
 
 
 class ToolManager(HackingToolsCollection):
-    TITLE = "Update or Uninstall | Krypton-Hub"
+    TITLE = "Uninstall or Update | Krypton-Hub"
     TOOLS = [
-        UpdateTool(),
-        UninstallTool()
+        UninstallTool(),
+        UpdateTool()
     ]
