@@ -44,7 +44,7 @@ if [ $choice == 1 ]; then
 	    sudo apt-get update && apt-get upgrade 
 	    sudo apt-get install python-pip
 		echo ""
-	    echo -e $YELLOW"[✔] Checking directories... ${BLUE}"
+	    echo -e $YELLOW"[✔] Checking directories... "$BLUE
 		echo ""
 	    if [ -d "$INSTALL_DIR" ]; then
 	        echo -e $RED"[!] A Directory krypton-hub Was Found.. Do You Want To Replace It ? [y/n]:" ;
@@ -56,7 +56,7 @@ if [ $choice == 1 ]; then
 	        fi
 	    fi
 			echo ""
-    		echo -e $YELLOW"[✔] Installing ... ${BLUE}";
+    		echo -e $YELLOW"[✔] Installing ... "$BLUE;
 		echo "";
 		git clone https://github.com/JustKKrypton/krypton-hub.git "$INSTALL_DIR";
 		echo "#!/bin/bash
@@ -65,7 +65,7 @@ if [ $choice == 1 ]; then
 		sudo cp kryptonhub /usr/bin/;
 		rm kryptonhub;
 		echo ""; 
-		echo -e $YELLOW"[✔] Installing Requirements ... ${BLUE}"
+		echo -e $YELLOW"[✔] Installing Requirements ... " $BLUE
 		echo ""
 		sudo pip3 install lolcat
 		sudo apt-get install -y figlet
@@ -75,7 +75,7 @@ if [ $choice == 1 ]; then
 		sudo pip3 install requests
 	else 
 		echo ""
-		echo -e $RED "[!] Please Check Your Internet Connection ..!! ${BLUE}"
+		echo -e $RED "[!] Please Check Your Internet Connection ..!! "$BLUE
 		echo ""
 	fi
 
