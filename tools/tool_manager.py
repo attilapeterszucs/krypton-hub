@@ -6,7 +6,7 @@ from core import KryptonHub
 from core import HackingToolsCollection
 
 
-class UpdateTool(KryptonHub):
+class UpdateTool(object):
     TITLE = "Update Tool or System"
     DESCRIPTION = "Update Tool or System"
 
@@ -30,7 +30,7 @@ class UpdateTool(KryptonHub):
                   "sudo rm -rf /etc/krypton-hub/;"
                   "mkdir krypton-hub;"
                   "cd krypton-hub;"
-                  "git clone https://github.com/JustKKrypton/krypton-hub.git;"
+                  "git clone https://github.com/attilapeterszucs/krypton-hub.git;"
                   "cd krypton-hub;"
                   "sudo chmod +x install.sh;"
                   "./install.sh")
