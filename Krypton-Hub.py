@@ -78,7 +78,7 @@ if __name__ == "__main__":
             fpath = "/home/kryptonhubpath.txt"
             if not os.path.exists(fpath):
                 os.system('clear')
-                # run.menu()
+                print(logo)
                 print("""
                         [@] Set Path (All your tools will be installed in that directory)
                         [1] Manual 
@@ -149,7 +149,7 @@ def main_menu():
         os.system("iwconfig")
         back_to_main()
     elif command == 2:
-        print("Sorry, Currently now available!")
+        print("Sorry, Currently not available!")
         back_to_main()
     elif command == 10:
         tools()
