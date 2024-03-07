@@ -137,6 +137,14 @@ class Howmanypeople(KryptonHub):
     RUN_COMMANDS = ["howmanypeoplearearound"]
 
 
+class Websploit(KryptonHub):
+    TITLE = "Websploit"
+    DESCRIPTION = "Websploit is a high level MITM framework "
+    INSTALL_COMMANDS = [
+        "sudo apt-get install websploit"
+    ]
+    RUN_COMMANDS = ["websploit"]
+
 class WirelessAttackTools(HackingToolsCollection):
     TITLE = "Wireless attack tools"
     DESCRIPTION = ""
@@ -149,5 +157,6 @@ class WirelessAttackTools(HackingToolsCollection):
         Wifite(),
         EvilTwin(),
         Fastssh(),
-        Howmanypeople()
+        Howmanypeople(),
+        Websploit()
     ]
