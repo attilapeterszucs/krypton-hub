@@ -13,6 +13,8 @@ class Nikto(KryptonHub):
                     "outdated server software, and server misconfigurations. \n\n " \
                     "Usage: docker run --rm sullo/nikto -h http://www.example.com"
     INSTALL_COMMANDS = [
+        "sudo apt install -y docker.io",
+        "sudo systemctl enable docker --now",
         "sudo git clone https://github.com/sullo/nikto",
         "docker build -t sullo/nikto .",
         "docker run --rm sullo/nikto"
