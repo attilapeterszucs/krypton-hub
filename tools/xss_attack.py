@@ -6,6 +6,21 @@ from core import KryptonHub
 from core import HackingToolsCollection
 
 
+class BeEF(KryptonHub):
+    TITLE = "BeEF"
+    DESCRIPTION = "BeEF is short for The Browser Exploitation Framework. \n " \
+                   "It is a penetration testing tool that focuses on the web browser."
+    INSTALL_COMMANDS = [
+        "sudo git clone https://github.com/beefproject/beef",
+        "sudo apt-add-repository -y ppa:brightbox/ruby-ng",
+        "cd beef;sudo bash install"
+    ]
+    RUN_COMMANDS = [
+        "sudo bash beef"
+    ]
+    PROJECT_URL = "https://github.com/beefproject/beef"
+
+
 class Dalfox(KryptonHub):
     TITLE = "DalFox(Finder of XSS)"
     DESCRIPTION = "XSS Scanning and Parameter Analysis tool."
@@ -102,7 +117,7 @@ class XanXSS(KryptonHub):
               " [!]python xanxss.py [Options]")
 
 
-class XSSStrike(KryptonHub):
+class XSStrike(KryptonHub):
     TITLE = "Advanced XSS Detection Suite"
     DESCRIPTION = "XSStrike is a python script designed to detect and exploit XSS vulnerabilites."
     INSTALL_COMMANDS = [
@@ -113,7 +128,7 @@ class XSSStrike(KryptonHub):
     PROJECT_URL = "https://github.com/UltimateHackers/XSStrike"
 
     def __init__(self):
-        super(XSSStrike, self).__init__(runnable = False)
+        super(XSStrike, self).__init__(runnable = False)
 
 
 class RVuln(KryptonHub):
@@ -134,6 +149,7 @@ class RVuln(KryptonHub):
 class XSSAttackTools(HackingToolsCollection):
     TITLE = "XSS Attack Tools"
     TOOLS = [
+        BeEF(),
         Dalfox(),
         XSSPayloadGenerator(),
         XSSFinder(),
@@ -141,6 +157,6 @@ class XSSAttackTools(HackingToolsCollection):
         XSpear(),
         XSSCon(),
         XanXSS(),
-        XSSStrike(),
+        XSStrike(),
         RVuln()
     ]
