@@ -16,7 +16,7 @@ class BeEF(KryptonHub):
         "cd beef;sudo bash install"
     ]
     RUN_COMMANDS = [
-        "sudo bash beef"
+        "cd beef;sudo bash beef"
     ]
     PROJECT_URL = "https://github.com/beefproject/beef"
 
