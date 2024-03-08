@@ -18,6 +18,19 @@ class Nikto(KryptonHub):
     PROJECT_URL = "https://github.com/sullo/nikto"
 
 
+class Wfuzz(KryptonHub):
+    TITLE = "Wfuzz"
+    DESCRIPTION = "Wfuzz is a flexible web application brute forcer \n " \
+                   "that can be used for finding hidden resources and \n " \
+                   "discovering vulnerabilities such as directory traversal, \n " \
+                   "file inclusion, and more. "
+    INSTALL_COMMANDS = [
+        "sudo pip install wfuzz"
+    ]
+    RUN_COMMANDS = ["sudo wfuzz -h"]
+    PROJECT_URL = "https://github.com/xmendez/wfuzz"
+
+
 class Web2Attack(KryptonHub):
     TITLE = "Web2Attack"
     DESCRIPTION = "Web hacking framework with tools, exploits by python"
@@ -134,6 +147,7 @@ class WebAttackTools(HackingToolsCollection):
     DESCRIPTION = ""
     TOOLS = [
         Nikto(),
+        Wfuzz(),
         Web2Attack(),
         Skipfish(),
         SubDomainFinder(),
