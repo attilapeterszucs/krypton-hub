@@ -5,6 +5,19 @@ from core import KryptonHub
 from core import HackingToolsCollection
 
 
+class Nikto(KryptonHub):
+    TITLE = "Nikto"
+    DESCRIPTION = "Nikto is an open-source web server scanner \n " \
+                    "that performs comprehensive tests against web servers \n " \
+                    "for multiple items, including dangerous files/CGIs, \n " \
+                    "outdated server software, and server misconfigurations."
+    INSTALL_COMMANDS = [
+        "sudo git clone https://github.com/sullo/nikto"
+    ]
+    RUN_COMMANDS = ["cd nikto/program && sudo bash nikto.pl -h"]
+    PROJECT_URL = "https://github.com/sullo/nikto"
+
+
 class Web2Attack(KryptonHub):
     TITLE = "Web2Attack"
     DESCRIPTION = "Web hacking framework with tools, exploits by python"
@@ -120,6 +133,7 @@ class WebAttackTools(HackingToolsCollection):
     TITLE = "Web Attack tools"
     DESCRIPTION = ""
     TOOLS = [
+        Nikto(),
         Web2Attack(),
         Skipfish(),
         SubDomainFinder(),
