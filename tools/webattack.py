@@ -10,12 +10,17 @@ class Nikto(KryptonHub):
     DESCRIPTION = "Nikto is an open-source web server scanner \n " \
                     "that performs comprehensive tests against web servers \n " \
                     "for multiple items, including dangerous files/CGIs, \n " \
-                    "outdated server software, and server misconfigurations."
+                    "outdated server software, and server misconfigurations. \n\n " \
+                    "Usage: docker run --rm sullo/nikto -h http://www.example.com"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/sullo/nikto"
+        "sudo git clone https://github.com/sullo/nikto",
+        "docker build -t sullo/nikto .",
+        "docker run --rm sullo/nikto"
     ]
-    RUN_COMMANDS = ["cd nikto/program && sudo bash nikto.pl -h"]
     PROJECT_URL = "https://github.com/sullo/nikto"
+
+    def __init__(self):
+        super(Nikto, self).__init__(runnable = False)
 
 
 class Wfuzz(KryptonHub):
